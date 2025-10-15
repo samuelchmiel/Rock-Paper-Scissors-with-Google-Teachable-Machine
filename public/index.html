@@ -12,15 +12,8 @@
 
  <meta name="viewport" content="width=device-width"/>
   <meta charSet="utf-8"/>
-  <meta name="twitter:site" content="@silviueftimie"/>
-  <meta name="twitter:description" content="Rock Paper Scissors with Google Teachable Machine"/>
-  <meta name="twitter:creator" content="@tailwindcss"/>
-  <meta property="og:url" content="https://silviueftimiedev.web.app/"/>
-  <meta property="og:type" content="article"/>
-  <meta property="og:description" content="I have used again the magic of Google to train a visual machine learning model and turn everything into a classic game for my kids: Rock Paper Scissors."/>
-  <meta property="og:image" content="https://tailwindcss.com/_next/static/media/twitter-large-card.2e0e43628f69eba639f387da72chttps://raw.githubusercontent.com/seftimie/Rock-Paper-Scissors-with-Google-Teachable-Machine/main/screens/6.jpg"/>
 
-  <title>Rock Paper Scissors with Google Teachable Machine</title>
+  <title>Gra Papier-Kamień-Nożyce</title>
 
 
 <!-- tailwind css -->
@@ -46,11 +39,10 @@
 
               <!-- start welcome message -->
               <h2 class="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-                Ready to play
+                Gotowy do gry w
                 <br>
-                <span class="text-indigo-600">Rock Paper Scissors?</span>
+                <span class="text-indigo-600">Papier Kamień Nożyce?</span>
                 <br/>
-                <p class="text-base font-light text-gray-600">by <span class="text-indigo-600 font-extrabold"><a href="https://www.linkedin.com/in/eftimiesilviudaniel/" target="_blank">ESD</a></span> with love for <span class="text-indigo-600 font-extrabold"><a href="https://www.youtube.com/channel/UCHV6pF1KjgCJB4M__4ZYISg/videos" target="_blank">Karl</a></span> & Neo (Vue JS, Tailwind, Laracast's illustrations & Google Teachable Machine)</p>
               </h2>
               <!-- end welcome message -->
 
@@ -60,13 +52,13 @@
 
                   <div class="inline-flex rounded-md shadow">
                     <a href="#" v-on:click="enableButton" id="enableButton" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-                      Enable Webcam
+                      Włącz kamerę
                     </a>
                   </div>
 
                   <div class="ml-3 inline-flex rounded-md shadow">
                     <a href="#" v-on:click="playButton"  id="playButton" class="hidden inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-                      Play
+                      Zagraj
                     </a>
                   </div>
                   <!-- end play button -->
@@ -91,7 +83,7 @@
 
               <!-- start human box --->
               <div class="items-center flex-1 text-gray-100 text-center bg-gray-900 px-4 py-2 m-2 text-base">
-                  <h4 class="text-lg leading-6 font-medium text-gray-200">👤 Human score: {{ humanScore }} pts </h4>
+                  <h4 class="text-lg leading-6 font-medium text-gray-200">👤 Twój wynik: {{ humanScore }} pts </h4>
 
                   <h1 class="text-6xl mt-20" v-if="humanChoose === 0">👊</h1>
                   <h1 class="text-6xl mt-20" v-else-if="humanChoose === 1">🤚</h1>
@@ -108,7 +100,7 @@
 
               <!-- start robot box --->
               <div class="items-center flex-1 text-gray-100 text-center bg-gray-900 px-4 py-2 m-2 text-base">
-                  <h4 class="text-lg leading-6 font-medium text-gray-200">🤖 Robot score: {{ robotScore }} pts </h4>
+                  <h4 class="text-lg leading-6 font-medium text-gray-200">🤖 Wynik robota: {{ robotScore }} pts </h4>
 
                   <h1 class="text-6xl mt-20" v-if="robotChoose === 0">👊</h1>
                   <h1 class="text-6xl mt-20" v-else-if="robotChoose === 1">🤚</h1>
@@ -117,7 +109,7 @@
                   <h1 class="text-6xl mt-20" v-else></h1>
 
                   <p class="text-center mt-20">
-                      <img class="text-center inline" src="img/robot.svg" alt="Laracasts Sign Up Mascot">
+                      <img class="text-center inline" src="img/happy_robot_remix_monsterbraingames.svg" alt="Laracasts Sign Up Mascot">
                   </p>
               </div>
               <!-- end robot box --->
@@ -125,8 +117,8 @@
         </div>
         <!-- end gameboard -->
 
-        <audio id="audioEffect1"><source src="./audio/lose.mp3" type="audio/mpeg" /></audio>
-        <audio id="audioEffect2"><source src="./audio/win.mp3" type="audio/mpeg" /></audio>
+        <!--<audio id="audioEffect1"><source src="./audio/lose.mp3" type="audio/mpeg" /></audio>-->
+        <!--<audio id="audioEffect2"><source src="./audio/win.mp3" type="audio/mpeg" /></audio>-->
         
         <input hidden v-model="humanChoose" id="humanChoose">
 
